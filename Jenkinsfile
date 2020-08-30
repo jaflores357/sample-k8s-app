@@ -17,7 +17,7 @@ node {
                     $class: 'kubernetesDeploy', 
                     kubeconfigId: ${kubeconfig}, 
                     configs: '**/k8s/*'
-                )
+                ])
             }
         }
         //stage('Deploy to EKS production cluster') {

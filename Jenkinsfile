@@ -21,7 +21,7 @@ pipeline {
                     $class: 'kubernetesDeploy', 
                     kubeconfigId: env.KUBECONFIG, 
                     configs: '**/k8s/*'
-                )
+                ])
             }
         }
         //stage('Deploy to EKS production cluster') {

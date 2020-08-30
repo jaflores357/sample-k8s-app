@@ -3,7 +3,7 @@
 pipeline {
     agent any
     environment {
-        KUBECONFIG = '834f02d9-7651-4189-8dfd-f044ea3972ae'
+        KUBECONFIG = 'jenkins-kubeconfig'
     }
     stages {
         stage("Checkout code") {

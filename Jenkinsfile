@@ -12,8 +12,14 @@ pipeline {
             }
         }
         stage("Build image") {
+            steps{
+                sh "echo 'Build image'"
+            }    
         }
         stage("Push image") {
+            steps{
+                sh "echo 'Push image'"
+            }    
         }       
         stage('Deploy to EKS dev cluster') {
             steps{

@@ -4,7 +4,7 @@ pipeline {
     agent any
     environment {
         KUBECONFIG = 'jenkins-kubeconfig'
-        ENDPOINT = ''
+        ENDPOINT = " "
     }
     stages {
         stage("Checkout code") {

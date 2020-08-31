@@ -43,6 +43,7 @@ pipeline {
 
         stage('Test endpoint') {
             steps{
+                sh "chmod +x ./check-endpoint.sh"
                 sh "./check-endpoint.sh ${ENDPOINT}"
             }
         }

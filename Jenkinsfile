@@ -43,7 +43,7 @@ pipeline {
 
         stage('Test endpoint') {
             steps{
-                sh './check-endpoint.sh ${ENDPOINT}'
+                sh "./check-endpoint.sh ${ENDPOINT}"
             }
         }
     }    

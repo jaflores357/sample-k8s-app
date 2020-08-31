@@ -4,7 +4,7 @@ pipeline {
     agent any
     environment {
         KUBECONFIG = 'jenkins-kubeconfig'
-        ENDPOINT = 'http://2048-game.brazil.syntonic.com'
+        ENDPOINT = ''
     }
     stages {
         stage("Checkout code") {

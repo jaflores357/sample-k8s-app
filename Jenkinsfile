@@ -43,16 +43,7 @@ pipeline {
 
         stage('Test endpoint') {
             steps{
-                sh '''
-                for i in $(seq 1 10);do 
-                    retcode=$(curl -o /dev/null -s -w "%{http_code}" http://2048-game.brazil.syntonic.com)
-                    if [ $retcode -eq 200 ]; then 
-                        exit 0 
-                    fi
-                    sleep 30
-                done
-                exit 1
-                '''
+                shsh './check-endpoint.sh ${env.ENDPOINT}'
             }
         }
     }    

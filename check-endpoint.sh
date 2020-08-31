@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ $# -lt 1 ] && echo "No endpoint" && exit 0
+
 URL=$1
 for i in $(seq 1 10); do
     retcode=$(curl -o /dev/null -s -w "%{http_code}" ${URL})
